@@ -18,11 +18,44 @@
     </div>
     <div id="right-side">
         <div id="header">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+            <p>This is not a real online service! Do you own a cute rat and want to join our RatMania forum to contact other rat owners in a safe space? Sign up <em>now</em> to get started.</p>
             <p>You <em>know</em> you want to.</p>
         </div>
         <div id="sign-up-section">
             <p>Let's do this!</p>
+            <form action="" method="post">
+                <label for="first-name">First Name  <span class="special-text">*</span>
+                <input class="login-input" type="text" id="first-name" name="first-name" required>
+                </label>
+
+                <label for="last-name">Last Name  <span class="special-text">*</span>
+                    <input class="login-input" type="text" id="last-name" name="last-name" required>
+                </label>
+
+                <label for="email">Email  <span class="special-text">*</span>
+                    <input class="login-input" type="email" id="email" name="email" required>
+                </label>
+
+                <label for="phone-number">Phone Number
+                    <input class="login-input" type="tel" id="phone-number" name="phone-number">
+                </label>
+
+                <label for="password">Password <span class="special-text">*</span>
+                    <input class="login-input"
+                           type="password"
+                           id="password"
+                           name="password"
+                           required
+                           minlength ="6">
+                </label>
+                <label for="password-confirm">Confirm Password  <span class="special-text">*</span>
+                    <input class="login-input" type="password" id="password-confirm" name="password-confirm" required>
+                </label>
+            </form>
+        </div>
+        <div class="confirmation">
+            <button type="submit" class="create-acc-button">Create Account</button>
+            <p> Already have an account? <a class="special-text" href="#">Log In</a></p>
         </div>
     </div>
 </div>
