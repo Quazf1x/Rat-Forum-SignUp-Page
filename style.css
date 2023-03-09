@@ -1,0 +1,68 @@
+
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro',Arial;
+    background-color: #fcfcfc;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+}
+/* left side picture with logo */
+#left-side-picture{
+    background: url("Pics/5097070.png") 30%;
+    width: 45vw;
+    height: 100vh;
+    position: relative;
+}
+#banner{
+    background: rgba(0, 0, 0, 0.53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    margin-top: 70px;
+    position: absolute;
+    width: 100%;
+}
+#banner img{
+    height: 90px;
+    width: 90px;
+}
+#banner h1{
+    color: white;
+    font-family: 'Oswald';
+    font-size: 4em;
+    font-weight: 300;
+    letter-spacing: .09rem;
+    margin-left: 5px;
+}
+/*right side info*/
+#right-side{
+    width:100%;
+}
+#header{
+    height: 20vh;
+    width: 60vw;
+    padding-left: 30px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+
+}
+#header p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: 600;
+}
+#sign-up-section{
+    background-color: white;
+    height: 50vh;
+    width: 100%;
+    padding-top: .1rem;
+    padding-left: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.24);
+}
+#sign-up-section p{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
