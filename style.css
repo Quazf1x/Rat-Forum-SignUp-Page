@@ -2,9 +2,12 @@
     margin-left: 30px;
 }
 body{
+    background-color: #fff7f5;
     margin: 0;
+    padding: 0;
     font-family: 'Source Sans Pro',sans-serif;
-
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 p{
@@ -50,7 +53,6 @@ p{
 #right-side{
     width:100%;
     z-index: 1;
-    background-color: #fff7f5;
 }
 #header{
     height: 20vh;
@@ -127,8 +129,8 @@ input:focus{
     color: white;
     font-weight: 600;
     font-size: 1.2rem;
-    font-family: 'Oswald', serif;
-    letter-spacing: .08rem;
+    font-family: 'Source Sans Pro', serif;
+    letter-spacing: .01rem;
     padding: 15px 50px;
     cursor: pointer;
     transition: background-color 0.15s,color 0.15s;
@@ -142,4 +144,82 @@ input:focus{
     font-weight: 400;
     cursor: pointer;
     text-decoration: none;
+}
+
+
+@media only screen and (max-width: 600px){
+    body{
+        height: 130vh;
+        overflow: scroll;
+    }
+    .main{
+        flex-direction: column;
+    }
+    #left-side-picture{
+        height: 18vh;
+        width: 100%;
+        max-width: 100%;
+        background-size: 150%;
+        background-position-y:55%;
+    }
+    .left-gap{
+        margin-left: 2vw;
+    }
+    #banner{
+        margin-top: 0;
+        height: 100%;
+    }
+    #banner img{
+        height: 80px;
+        width: 80px;
+        margin-bottom: 15px;
+    }
+    #banner h1{
+        margin-bottom: 60px;
+    }
+    #header{
+        min-width: 250px;
+        padding-top: 0;
+        margin-bottom: 0;
+        width: 90vw;
+    }
+    #header p{
+        font-size: 1.0rem;
+    }
+
+    .form-background{
+        padding-top: 5px;
+        margin-top: -20px;
+        width: 100%;
+        height: 69vh;
+    }
+    .form-background p{
+        font-size: 1.4rem;
+        text-align: center;
+        margin-left: -1vh;
+    }
+    .forms-div{
+        width: 98vw;
+        justify-content: center;
+        margin-right: 20px;
+        column-gap: 5vw;
+    }
+    .form-div{
+        text-align: center;
+        font-size: 1.2rem;
+        margin-left: -3vh;
+        width: 90%;
+
+    }
+    .create-acc-button{
+        width: 90vw;
+    }
+    .confirmation{
+        flex-direction: column;
+        margin-top: 2vh;
+    }
+    .confirmation p{
+        margin-left: 0;
+        margin-top: 2vh;
+    }
 }
