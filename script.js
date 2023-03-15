@@ -1,24 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const forms = document.querySelectorAll('.input-form');
   const labels = document.querySelectorAll('label');
   const errorContents = document.getElementsByClassName('error');
   const firstName = document.querySelector('#first-name');
   const lastName = document.querySelector('#last-name');
   const email = document.querySelector('#email');
-  const phoneNumber = document.querySelector('#phoneNumber');
   const password = document.querySelector('#password');
   const passwordC = document.querySelector('#passwordC');
+  
   const regex = {
-    password: /(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])[a-zA-z0-9]{8,}/,
-    phoneNumber:/\d{11}/
+    password: /\w{8,}/
   }
 
-  /*function validateRegex(form,regex){
-    if(regex.test(field.value)){
-      invalidInput()
-    }
-  }
-*/
   function invalidInput(message,formIndex,bool){
     if(bool){
       errorContents[formIndex].textContent = message;
@@ -27,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     else{
       errorContents[formIndex].textContent = '';
-      labels[formIndex].style.color="black";
+      labels[formIndex].style.color="black";   
     }
   }
 
@@ -37,7 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   email.addEventListener('keyup', (e) => { invalidInput('Please enter a valid Email.', 2, email.validity.typeMismatch);});
 
- // phoneNumber.addEventListener('keyup',(e) => { validateRegex(e.target, regex[e.target.attributes.name.value])});
+  password.addEventListener('keyup',(e) => { 
+    invalidInput(`Password must be at least 8 characters long.`, 4,
+    !regex[e.target.attributes.name.value].test(e.target.value)) }); //I used ! because .test value returns false when it doesnt match,but invalidInput function takes 'false' bool as a sign of no problems
 
   passwordC.addEventListener('keyup',(e) => { invalidInput('Passwords do not match.', 5, password.value!==passwordC.value);});
 

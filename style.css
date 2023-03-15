@@ -89,6 +89,7 @@ p{
     top:63px;
     color:#ff8383;
     font-weight: 400;
+    width: 100%;
 }
 
 .error-border{
@@ -168,7 +169,7 @@ p{
 
 @media only screen and (max-width: 600px){
     body{
-        height: 130vh;
+        height: 150vh;
         overflow: scroll;
     }
     .main{
@@ -208,9 +209,10 @@ p{
 
     .form-background{
         padding-top: 5px;
+        flex-direction: column;
         margin-top: -20px;
         width: 100%;
-        height: 69vh;
+        height: 88vh;
     }
     .form-background p{
         font-size: 1.4rem;
@@ -222,22 +224,27 @@ p{
         justify-content: center;
         margin-right: 20px;
         column-gap: 5vw;
+        row-gap: 20px;
     }
     .form-div{
         text-align: center;
         font-size: 1.2rem;
         margin-left: -3vh;
         width: 90%;
-
+    }
+    .error{
+        top:73px;
+        font-size: 1rem;
     }
     .create-acc-button{
-        width: 90vw;
+        width: 90%;
+        height: 80px;
     }
-    .confirmation{
+    #confirmation{
         flex-direction: column;
-        margin-top: 2vh;
+        margin-top: 3vh;
     }
-    .confirmation p{
+    #confirmation p{
         margin-left: 0;
         margin-top: 2vh;
     }
