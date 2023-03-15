@@ -83,6 +83,18 @@ p{
     font-size: 1.5rem;
     font-weight: 300;
 }
+
+.error{
+    position: absolute;
+    top:63px;
+    color:#ff8383;
+    font-weight: 400;
+}
+
+.error-border{
+    border: 2px solid #ff8383;
+}
+
 .forms-div{
     column-gap: 30px;
     display: flex;
@@ -100,7 +112,7 @@ p{
     width: 20vw;
 }
 .input-form{
-    border: 2px solid #edeff3;
+    border: 2px solid #edeff3; 
     border-radius: 5px;
     font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;
@@ -111,8 +123,13 @@ p{
     
 }
 .input-form:focus{
-    border: 2px solid #b48578;
     outline: none;
+}
+.input-form:valid:focus{
+    border: 2px solid #b48578;
+}
+.input-form:invalid:focus{
+    border: 2px solid #d45c64;
 }
 
 #confirmation{
@@ -149,12 +166,6 @@ p{
     text-decoration: none;
 }
 
-.error{
-    position: absolute;
-    top:63px;
-    color: rgb(255, 131, 131);
-    font-weight: 400;
-}
 @media only screen and (max-width: 600px){
     body{
         height: 130vh;
